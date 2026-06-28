@@ -1,11 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invoice Banao</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Banao</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" sizes="2x32" href="assets/Invoice Banao logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h1>Invoice Banao</h1>
+        <h3>Digital Billing for Digital India</h3>
+      </div>
+    </header>
+    <div class="mainScreen">
+      <div class="invoiceNumber">
+        <h3></h3>
+      </div>
+      <div class="businessInfo">
+        <h3>Business Information</h3>
+        <input
+          type="text"
+          name="businessName"
+          id="bName"
+          placeholder="Enter Your Business Name"
+        />
+        <input
+          type="email"
+          name="businessEmail"
+          id="bEmail"
+          placeholder="Enter Your Business Email"
+        />
+        <input
+          type="number"
+          name="businessPhoneNo"
+          id="bPhoneNo"
+          placeholder="Enter Your Business Phone Number"
+        />
+        <input
+          type="text"
+          name="businessGst"
+          id="bGst"
+          placeholder="Enter Your Business GST Value"
+        />
+      </div>
+      <div class="clientInfo">
+        <h3>Client Information</h3>
+        <input
+          type="text"
+          name="clientName"
+          id="cName"
+          placeholder="Enter Your Client Name"
+        />
+        <input
+          type="email"
+          name="clientEmail"
+          id="cEmail"
+          placeholder="Enter Your Client's Email"
+        />
+        <input
+          type="number"
+          name="clientPhoneNo"
+          id="cPhoneNo"
+          placeholder="Enter Your Client's Phone Number"
+        />
+        <input
+          type="text"
+          name="businessGst"
+          id="cGst"
+          placeholder="Enter Your Client's GST Value"
+        />
+      </div>
+      <div class="projectDetails">
+        <h3>Project Information</h3>
+        <div class="projectWrapper">
+          <div class="project-var-1">
+            <h4>Project 1</h4>
+            <input
+              type="text"
+              name="projectName"
+              id="pName"
+              placeholder="Enter Your Project Name"
+            />
+            <input
+              type="number"
+              name="quantity"
+              id="quantity"
+              placeholder="Enter Quantity"
+            />
+            <input
+              type="number"
+              name="project_1_Price"
+              id="p1Price"
+              placeholder="Enter Price"
+            />
+          </div>
+          <div class="project-var-2">
+            <h4>Project 2</h4>
+            <input
+              type="text"
+              name="projectName"
+              id="pName"
+              placeholder="Enter Your Project Name"
+            />
+            <input
+              type="number"
+              name="quantity"
+              id="quantity"
+              placeholder="Enter Quantity"
+            />
+            <input
+              type="number"
+              name="project_2_Price"
+              id="p2Price"
+              placeholder="Enter Price"
+            />
+          </div>
+          <div class="project-var-3">
+            <h4>Project 3</h4>
+            <input
+              type="text"
+              name="projectName"
+              id="pName"
+              placeholder="Enter Your Project Name"
+            />
+            <input
+              type="number"
+              name="quantity"
+              id="quantity"
+              placeholder="Enter Quantity"
+            />
+            <input
+              type="number"
+              name="project_3_Price"
+              id="p3Price"
+              placeholder="Enter Price"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="gst">
+        <h3>Goods.Service.Tax</h3>
+        <h4>Select GST Rate From Below Options</h4>
+
+        <label for="gst">GST Rate</label>
+
+        <select id="gst" name="gst">
+          <option value="0">0% (No GST)</option>
+          <option value="5">5%</option>
+          <option value="12">12%</option>
+          <option value="18" selected>18%</option>
+          <option value="28">28%</option>
+        </select>
+      </div>
+      <button id="generateInvoice">Generate Invoice</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
