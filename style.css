@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Stack+Sans+Notch:wght@200..700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +9,395 @@
 body {
   min-height: 100vh;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: var(--bg);
+}
+
+:root {
+  --bg: #0E0C0A;
+  --headerText: #b9b9b9;
+}
+
+header>.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2.5vh 3vw;
+}
+
+header>.header h1 {
+  color: var(--headerText);
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 5vw;
+}
+
+.header>h3 {
+  color: var(--headerText);
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  font-size: 1.45vw;
+}
+
+.header>h3>span {
+  font-style: italic;
+}
+
+.mainScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.mainScreen>.businessInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.businessInfo>h3 {
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  font-size: 3vw;
+  color: var(--headerText);
+}
+
+.mainScreen>.businessInfo>input {
+  padding: 2.5vh;
+  width: 50%;
+  border: 1px solid rgb(112, 112, 112);
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgb(224, 224, 224);
+  font-size: 1rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.mainScreen .businessInfo input::placeholder {
+  color: rgb(175, 175, 175);
+  font-size: 1rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.mainScreen>.clientInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+.clientInfo>h3 {
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  font-size: 3vw;
+  color: var(--headerText);
+}
+
+.mainScreen>.clientInfo>input {
+  padding: 2.5vh;
+  width: 50%;
+  border: 1px solid rgb(112, 112, 112);
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgb(224, 224, 224);
+  font-size: 1rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.clientInfo>::placeholder {
+  color: rgb(175, 175, 175);
+  font-size: 1rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.mainScreen>.projectDetails {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.projectDetails>h3 {
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  font-size: 3vw;
+  color: var(--headerText);
+}
+
+.projectDetails>.projectWrapper {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  /* grid-template-columns: 1fr; */
+  gap: 4rem;
+  width: 100%;
+  flex-wrap: wrap;
+  /* background-color: blue; */
+}
+
+.project-var-1>h4 {
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5vw;
+  color: var(--headerText);
+  margin-bottom: 3vh;
+}
+
+.project-var-1>.input-row-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.input-row-1>input {
+  padding: 2.5vh 3vw;
+  border: 1px solid rgb(112, 112, 112);
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgb(224, 224, 224);
+  font-size: 1rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.input-row-1>::placeholder {
+  color: rgb(175, 175, 175);
+  font-size: 0.9rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.project-var-2>h4 {
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5vw;
+  color: var(--headerText);
+  margin-bottom: 3vh;
+}
+
+.project-var-2>.input-row-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.input-row-2>input {
+  padding: 2.5vh 3vw;
+  border: 1px solid rgb(112, 112, 112);
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgb(224, 224, 224);
+  font-size: 1rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.input-row-2>::placeholder {
+  color: rgb(175, 175, 175);
+  font-size: 0.9rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.project-var-3>h4 {
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5vw;
+  color: var(--headerText);
+  margin-bottom: 3vh;
+}
+
+.project-var-3>.input-row-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.input-row-3>input {
+  padding: 2.5vh 3vw;
+  border: 1px solid rgb(112, 112, 112);
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgb(224, 224, 224);
+  font-size: 1rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.input-row-3>input::placeholder {
+  color: rgb(175, 175, 175);
+  font-size: 0.9rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.mainScreen>.gst {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  color: var(--headerText);
+}
+
+.gst>h3 {
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 3vw;
+  color: var(--headerText);
+  margin-bottom: 3vh;
+}
+
+.gst>h4 {
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3vw;
+  color: var(--headerText);
+  margin-bottom: 3vh;
+}
+
+.gst>.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.gst>.label label {
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3vw;
+  color: var(--headerText);
+  margin-bottom: 3vh;
+}
+
+.label select {
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3vw;
+  color: black;
+  background-color: var(--headerText);
+  border-radius: 5px;
+}
+
+.label option {
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3vw;
+  color: black;
+
+}
+
+button {
+  padding: 2vh;
+  width: 40%;
+  border-radius: 5px;
+  border: 1px solid #1DB954;
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.3vw;
+  background-color: transparent;
+  color: var(--headerText);
+  cursor: pointer;
+  transition: linear 0.25s;
+  margin-bottom: 20vh;
+}
+
+button:hover {
+  background-color: #1DB954;
+  border: none;
+  color: black;
+}
+
+footer {
+  font-family: "Space Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.1vw;
+  color: var(--headerText);
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+.copyright {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+.reportInvoive {
+  display: none;
+}
+
+
+@media (max-width:600px) {
+
+  header>.header h1 {
+    font-size: 9vw;
+  }
+
+  header>.header>h3 {
+    font-size: 3vw;
+  }
+
+  .mainScreen>.businessInfo>input {
+    width: 75%;
+  }
+
+  .businessInfo>::placeholder {
+    font-size: 3.5vw;
+  }
 }

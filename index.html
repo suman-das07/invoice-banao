@@ -6,12 +6,11 @@
     <title>Invoice Banao</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" sizes="2x32" href="assets/Invoice Banao logo.png" type="image/x-icon">
-  </head>
   <body>
     <header>
       <div class="header">
         <h1>Invoice Banao</h1>
-        <h3>Digital Billing for Digital India</h3>
+        <h3><span>Digital</span> Billing for <span>Digital</span> India</h3>
       </div>
     </header>
     <div class="mainScreen">
@@ -33,7 +32,7 @@
           placeholder="Enter Your Business Email"
         />
         <input
-          type="number"
+          type="text"
           name="businessPhoneNo"
           id="bPhoneNo"
           placeholder="Enter Your Business Phone Number"
@@ -42,7 +41,7 @@
           type="text"
           name="businessGst"
           id="bGst"
-          placeholder="Enter Your Business GST Value"
+          placeholder="Enter Your GST"
         />
       </div>
       <div class="clientInfo">
@@ -60,7 +59,7 @@
           placeholder="Enter Your Client's Email"
         />
         <input
-          type="number"
+          type="text"
           name="clientPhoneNo"
           id="cPhoneNo"
           placeholder="Enter Your Client's Phone Number"
@@ -77,11 +76,12 @@
         <div class="projectWrapper">
           <div class="project-var-1">
             <h4>Project 1</h4>
-            <input
+            <div class="input-row-1">
+                <input
               type="text"
               name="projectName"
               id="p1Name"
-              placeholder="Enter Your Project Name"
+              placeholder="Enter Project Name"
             />
             <input
               type="number"
@@ -95,14 +95,17 @@
               id="p1Price"
               placeholder="Enter Price"
             />
+            </div>
+
           </div>
           <div class="project-var-2">
             <h4>Project 2</h4>
-            <input
+            <div class="input-row-2">
+             <input
               type="text"
               name="projectName"
               id="p2Name"
-              placeholder="Enter Your Project Name"
+              placeholder="Enter Project Name"
             />
             <input
               type="number"
@@ -116,14 +119,17 @@
               id="p2Price"
               placeholder="Enter Price"
             />
+            </div>
+
           </div>
           <div class="project-var-3">
             <h4>Project 3</h4>
-            <input
+            <div class="input-row-3">
+             <input
               type="text"
               name="projectName"
               id="p3Name"
-              placeholder="Enter Your Project Name"
+              placeholder="Enter Project Name"
             />
             <input
               type="number"
@@ -137,15 +143,16 @@
               id="p3Price"
               placeholder="Enter Price"
             />
+            </div>
+
           </div>
         </div>
       </div>
       <div class="gst">
         <h3>Goods.Service.Tax</h3>
         <h4>Select GST Rate From Below Options</h4>
-
-        <label for="gst">GST Rate</label>
-
+        <div class="label">
+         <label for="gst">GST Rate</label>
         <select id="gst" name="gst">
           <option value="0">0% (No GST)</option>
           <option value="5">5%</option>
@@ -153,9 +160,12 @@
           <option value="18" selected>18%</option>
           <option value="28">28%</option>
         </select>
+        </div>
+
       </div>
-      <button id="generateInvoice">Generate Invoice</button>
+      <button id="generateInvoice" onclick="window.open('https://github.com/suman-das07/invoice-banao')">Generate Invoice</button>
     </div>
+    <footer>Invoice Banao  <span class="copyright">&copy;</span> 2026. Developed by Suman Das</footer>
     <div class="reportInvoive">
   <div class="reportInvoive">
 
