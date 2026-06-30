@@ -127,7 +127,7 @@ header>.header h1 {
   font-style: normal;
 }
 
-.clientInfo>::placeholder {
+.clientInfo>input::placeholder {
   color: rgb(175, 175, 175);
   font-size: 1rem;
   font-family: "Space Mono", monospace;
@@ -393,11 +393,85 @@ footer {
     font-size: 3vw;
   }
 
-  .mainScreen>.businessInfo>input {
-    width: 75%;
+  .businessInfo h3 {
+    font-size: 1.3rem;
   }
 
-  .businessInfo>::placeholder {
-    font-size: 3.5vw;
+  .mainScreen>.businessInfo>input {
+    width: 80%;
   }
+
+  .mainScreen>.businessInfo>input::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .mainScreen>.clientInfo h3 {
+    font-size: 1.3rem;
+  }
+
+  .mainScreen>.clientInfo>input {
+    width: 80%;
+  }
+
+  .mainScreen>.clientInfo>input::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .mainScreen>.projectDetails>h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-var-1>h4 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .project-var-1>.input-row-1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-var-2>h4 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .project-var-2>.input-row-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-var-3>h4 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .project-var-3>.input-row-3 {
+    display: flex;
+    flex-direction: column;
+  }
+  .gst h3{
+    font-size: 1.3rem;
+  }
+  .gst h4{
+    font-size: 0.9rem;
+  }
+  .label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gst>.label> label{
+    font-size: 1rem;
+  }
+  .label>select{
+    font-size: 1.2rem;
+  }
+ button{
+  padding: 2vh;
+  width: 80%;
+  font-size: 1rem;
+ }
+ footer{
+  font-size: 0.7rem;
+ }
 }
