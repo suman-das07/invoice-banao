@@ -378,8 +378,307 @@ footer {
   vertical-align: middle;
 }
 
+/* ===========================
+   REPORT INVOICE
+=========================== */
+
+#overlay {
+  position: fixed;
+  inset: 0;
+
+  /* display: none; */
+  /* Hidden initially */
+
+  justify-content: center;
+  align-items: flex-start;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 3rem 0;
+
+  /* background: rgba(0, 0, 0, 0.65); */
+  backdrop-filter: blur(8px);
+
+  z-index: 9999;
+}
+
+.download-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 4rem;
+}
+
+.download-btn-wrapper>button {
+  width: 25%;
+}
+
 .reportInvoive {
-  display: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  /* background: var(--bg); */
+}
+
+/* ===========================
+   A4 PAPER
+=========================== */
+
+.invoice-paper {
+  width: 70%;
+  max-width: 800px;
+  min-height: 1130px;
+  background: #ffffff;
+  padding: 25mm;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, .12),
+    0 8px 20px rgba(0, 0, 0, .08);
+  font-family: "Inter", sans-serif;
+  color: #1e293b;
+}
+
+/* ===========================
+   TOP SECTION
+=========================== */
+
+.invoice-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* gap: 2rem; */
+}
+
+.company-info h1 {
+  font-size: 2rem;
+  /* margin-bottom: .8rem; */
+  color: #0f172a;
+  font-family: "Space Mono", monospace;
+}
+
+.company-info p {
+  color: #64748b;
+  line-height: 1.8;
+  font-family: "Space Mono", monospace;
+}
+
+.invoice-title {
+  text-align: right;
+}
+
+.invoice-title h1 {
+  font-size: 3rem;
+  color: var(--bg);
+  letter-spacing: 3px;
+  /* margin-bottom: 1rem; */
+  font-family: "Space Mono", monospace;
+}
+
+.invoice-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+}
+
+.invoice-box p {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: .4rem 0;
+  font-family: "Space Mono", monospace;
+}
+
+/* ===========================
+   HR
+=========================== */
+
+.invoice-paper hr {
+  border: none;
+  border-top: 1px solid #d6dce4;
+  margin: 2rem 0;
+}
+
+/* ===========================
+   BILL TO
+=========================== */
+
+.bill-to h3 {
+  color: var(--bg);
+  /* margin-bottom: .8rem; */
+  font-size: 1.2rem;
+  font-family: "Space Mono", monospace;
+}
+
+.bill-to p {
+  color: #475569;
+  line-height: 1.8;
+  font-family: "Space Mono", monospace;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background: var(--bg);
+  color: white;
+}
+
+thead th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: .5px;
+  font-family: "Space Mono", monospace;
+}
+
+tbody td {
+  padding: 15px;
+  border-bottom: 1px solid #e2e8f0;
+  font-family: "Space Mono", monospace;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+tbody tr:hover {
+  background: #eef5ff;
+}
+
+/* ===========================
+   BOTTOM
+=========================== */
+
+.invoice-bottom {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* ===========================
+   NOTES
+=========================== */
+
+.payment-note {
+  flex: 1;
+}
+
+.payment-note h4 {
+  color: var(--bg);
+  margin-bottom: 2rem;
+  font-family: "Space Mono", monospace;
+}
+
+.payment-note p {
+  color: #64748b;
+  line-height: 1.8;
+  font-family: "Space Mono", monospace;
+}
+
+/* ===========================
+   TOTAL BOX
+=========================== */
+
+.invoice-total {
+  width: 300px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.4rem;
+}
+
+.invoice-total>div {
+  display: flex;
+  justify-content: space-between;
+  margin: .8rem 0;
+  font-size: 1rem;
+
+}
+
+.invoice-total hr {
+  margin: 1rem 0;
+}
+
+.grand-total {
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  color: var(--bg);
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.invoice-footer {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+
+.thankyou {
+  color: #2563eb;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.signature {
+  text-align: center;
+  color: #475569;
+  line-height: 2;
+}
+
+/* ===========================
+   PRINT
+=========================== */
+
+@page {
+  size: A4;
+  margin: 10mm;
+}
+
+@media print {
+  #overlay {
+    position: static;
+    overflow: visible;
+    padding: 0;
+    background: white;
+    backdrop-filter: none;
+  }
+
+  body {
+    background: white;
+  }
+
+  .reportInvoive {
+    padding: 0;
+    background: white;
+  }
+
+  .invoice-paper {
+    width: 210mm;
+    min-height: 297mm;
+    max-width: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 20mm;
+  }
 }
 
 
@@ -430,6 +729,7 @@ footer {
     display: flex;
     flex-direction: column;
   }
+
   .project-var-2>h4 {
     font-size: 1rem;
     text-align: center;
@@ -449,29 +749,125 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  .gst h3{
+
+  .gst h3 {
     font-size: 1.3rem;
   }
-  .gst h4{
+
+  .gst h4 {
     font-size: 0.9rem;
   }
-  .label{
+
+  .label {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .gst>.label> label{
+
+  .gst>.label>label {
     font-size: 1rem;
   }
-  .label>select{
+
+  .label>select {
     font-size: 1.2rem;
   }
- button{
-  padding: 2vh;
-  width: 80%;
-  font-size: 1rem;
- }
- footer{
-  font-size: 0.7rem;
- }
+
+  button {
+    padding: 2vh;
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.7rem;
+  }
+}
+
+/* ===========================
+   Overlay Invoice - Mobile
+=========================== */
+
+@media (max-width: 768px) {
+
+  #overlay {
+    padding: 1rem;
+  }
+
+  .invoice-paper {
+    width: 100%;
+    min-height: auto;
+    padding: 1.2rem;
+    border-radius: 8px;
+  }
+
+  /* Header */
+
+  .invoice-top {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .invoice-title {
+    width: 100%;
+    text-align: left;
+  }
+
+  .invoice-title h1 {
+    font-size: 2rem;
+  }
+
+  .company-info h1 {
+    font-size: 1.6rem;
+  }
+
+  .company-info p,
+  .bill-to p {
+    font-size: .9rem;
+  }
+
+  /* Table */
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    font-size: .85rem;
+    padding: .7rem;
+  }
+
+  /* Bottom */
+
+  .invoice-bottom {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .invoice-total {
+    width: 100%;
+  }
+
+  /* Footer */
+
+  .invoice-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  /* Download Button */
+
+  #pdfConvert {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  #overlayClose {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
 }

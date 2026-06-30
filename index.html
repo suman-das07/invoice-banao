@@ -6,7 +6,6 @@
     <title>Invoice Banao</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" sizes="2x32" href="assets/Invoice Banao logo.png" type="image/x-icon">
-  <body>
     <header>
       <div class="header">
         <h1>Invoice Banao</h1>
@@ -167,7 +166,8 @@
     </div>
     <footer>Invoice Banao  <span class="copyright">&copy;</span> 2026. Developed by Suman Das</footer>
 
-    <div class="reportInvoive">
+    <div id="overlay">
+
   <div class="reportInvoive">
 
     <div class="invoice-paper">
@@ -224,13 +224,13 @@
 
             <h3>Bill To</h3>
 
-            <p id="outClientName"></p>
+            <p id="outClientName">Suman</p>
 
-            <p id="outClientEmail"></p>
+            <p id="outClientEmail">sumanda0708@gmail.com</p>
 
-            <p id="outClientPhone"></p>
+            <p id="outClientPhone">+91 8884628769</p>
 
-            <p id="outClientGST"></p>
+            <p id="outClientGST">bhufgwyfchufwf</p>
 
         </div>
 
@@ -346,7 +346,7 @@
                     <span>Grand Total</span>
 
                     <span id="outGrandTotal">
-                        ₹0
+                        ₹
                     </span>
 
                 </div>
@@ -358,11 +358,11 @@
 
         <div class="invoice-footer">
 
-            <div class="thankyou">
+            <!-- <div class="thankyou">
 
                 Thank you for your business ❤️
 
-            </div>
+            </div> -->
 
             <div class="signature">
 
@@ -377,7 +377,10 @@
         </div>
 
     </div>
-
+</div>
+<div class="download-btn-wrapper">
+    <button id="pdfConvert">Download PDF</button>
+    <button id="overlayClose">Close</button>
 </div>
     </div>
 
